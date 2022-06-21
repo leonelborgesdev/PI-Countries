@@ -1,0 +1,136 @@
+.padre {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 2px 1rem;
+  background-color: #fff;
+}
+.group_btn {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.group_btn > p {
+  color: red;
+  background-color: #fff;
+}
+.group_btn > button {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid #8280ff;
+  padding: 8px 16px;
+  background: #8280ff;
+  font-size: 18px;
+  color: whitesmoke;
+}
+.group_btn > button:hover {
+  background: #4a498f;
+}
+#season {
+  width: 200%;
+}
+.divTextSelect {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #fff;
+}
+.divTextSelect > select {
+  background-color: #fff;
+}
+.divTextSelect > input {
+  width: 50%;
+  background-color: #fff;
+}
+.divSelctSeason {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #fff;
+}
+.divSelctSeason > select {
+  width: 100%;
+  background-color: #fff;
+}
+.divTextRange {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #fff;
+}
+.divTextRange > input {
+  width: 100%;
+  background-color: #fff;
+}
+.card1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0px;
+  background-color: #fff;
+  width: 980px;
+  height: 380px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card1 > form {
+  background-color: #fff;
+}
+.card1 form h2 {
+  background-color: #fff;
+}
+table.contries_table {
+  table-layout: fixed;
+  background-color: #fff;
+}
+#div_row {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  background-color: #fff;
+}
+#div_colum {
+  padding: 0px 0.5rem;
+  flex-direction: column;
+  justify-content: right;
+  width: 200px;
+  background-color: #fff;
+}
+#div_colum > h4 {
+  background-color: #fff;
+}
+
+#div_colum h4 input {
+  background-color: #fff;
+}
+#div_input {
+  padding: 0px 0.5rem;
+  width: 150px;
+  background-color: #fff;
+}
+#div2 {
+  height: 300px;
+  width: 400px;
+  background-color: #fff;
+}
+#div1 {
+  overflow: scroll;
+  height: 300px;
+  width: 500px;
+  background-color: #fff;
+}
+#div1 table tbody tr td {
+  background-color: #fff;
+}
+#div1 table thead tr th {
+  background-color: #fff;
+}
