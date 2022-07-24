@@ -73,7 +73,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
       }
     }
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (activity.name.length > 0) {
       if (durationValue.durationInt.length > 0) {
@@ -81,8 +81,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
           durationValue.durationInt + " " + durationValue.durationSelect;
         if (activity.ch_activity.length > 0) {
           setlabelError("VALIDADO");
-          dispatch(addActivitis(activity));
-          getAllCountries();
+          await dispatch(addActivitis(activity));
           navigate("/countries");
         } else {
           setlabelError(
