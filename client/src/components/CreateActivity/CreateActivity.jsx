@@ -145,16 +145,28 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
                           width="50"
                         />
                         <select
-                          name="durationSelect"
+                          className="select_seleccion"
                           onClick={handleInputChangeDuration}
                         >
-                          <option name="Horas" value="Horas">
+                          <option
+                            className="select_seleccion"
+                            name="Horas"
+                            value="Horas"
+                          >
                             Horas
                           </option>
-                          <option name="Dias" value="Dias">
+                          <option
+                            className="select_seleccion"
+                            name="Dias"
+                            value="Dias"
+                          >
                             Dias
                           </option>
-                          <option name="Semanas" value="Semanas">
+                          <option
+                            className="select_seleccion"
+                            name="Semanas"
+                            value="Semanas"
+                          >
                             Semanas
                           </option>
                         </select>
@@ -163,16 +175,32 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
                     <h4>
                       <div className="divSelctSeason">
                         <select name="season" onClick={handleInputChange}>
-                          <option name="season" value="Spring">
+                          <option
+                            className="select_seleccion"
+                            name="season"
+                            value="Spring"
+                          >
                             Spring
                           </option>
-                          <option name="season" value="Sumer">
+                          <option
+                            className="select_seleccion"
+                            name="season"
+                            value="Sumer"
+                          >
                             Sumer
                           </option>
-                          <option name="season" value="Fall">
+                          <option
+                            className="select_seleccion"
+                            name="season"
+                            value="Fall"
+                          >
                             Fall
                           </option>
-                          <option name="season" value="Winter">
+                          <option
+                            className="select_seleccion"
+                            name="season"
+                            value="Winter"
+                          >
                             Winter
                           </option>
                         </select>

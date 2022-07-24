@@ -85,3 +85,10 @@
   height: 100%;
   object-fit: contain;
 }
+
+.contries_table tbody tr th {
+  background-color: #fff;
+}
+.contries_table tbody tr td {
+  background-color: #fff;
+}

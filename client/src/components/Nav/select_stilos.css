@@ -1,20 +1,20 @@
 * {
   /* padding: 0px;
   margin: 0px; */
-  background-color: #d67070;
+  background-color: #3F3351;
 }
 
 #header {
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
-  background: rgb(114, 7, 7);
+  background: #1F1D36;
 }
 ul,
 ol {
   list-style: none;
 }
 .lista_select li {
-  background: rgb(114, 7, 7);
+  background: #1F1D36;
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
@@ -22,7 +22,7 @@ ol {
   right: 15px;
 }
 #name_item {
-  background: rgb(114, 7, 7);
+  background: #1F1D36;
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
