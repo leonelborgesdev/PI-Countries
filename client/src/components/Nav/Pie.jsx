@@ -3,7 +3,7 @@ import { connect, useDispatch } from "react-redux";
 import { getPages } from "../../redux/action/index";
 import "./Nav.css";
 
-const Pie = ({ countries, lim_paginas }) => {
+const Pie = ({ countries, lim_paginas, pagina }) => {
   let paginas = 0;
 
   if (countries.length > lim_paginas) {
@@ -16,7 +16,7 @@ const Pie = ({ countries, lim_paginas }) => {
     if (numero - Math.floor(numero) === 0) {
       paginas = numero + 1; //---------Si es entero, aumentando la pagina que se quito---------
     } else {
-      let val = numero.toString().split("."); //---Ya que el math.round no redondea
+      let val = numero.toString().split(".");
       paginas = parseInt(val[0], 10) + 2;
     }
   }
@@ -32,15 +32,23 @@ const Pie = ({ countries, lim_paginas }) => {
   return (
     <nav className="navigation_container_pie">
       <div>
-        {/* {console.log("paginas:", paginas)} */}
+        {console.log("pagina:", pagina)}
         <div className="botones_row">
           {countries.length > 0 ? (
             array.map((num) => {
               return (
-                <div className="grupo_botones" key={num}>
-                  <label id={num} onClick={handleInputChange}>
-                    {num}
-                  </label>
+                <div className="divNum" key={num}>
+                  {pagina.toString() === num.toString() ? (
+                    <div className="grupo_botones_selecionado">
+                      <label onClick={handleInputChange}>{num}</label>
+                    </div>
+                  ) : (
+                    <div className="grupo_botones">
+                      <label id={num} onClick={handleInputChange}>
+                        {num}
+                      </label>
+                    </div>
+                  )}
                 </div>
               );
             })
@@ -56,6 +64,7 @@ const Pie = ({ countries, lim_paginas }) => {
 export const mapStateToProps = (state) => {
   return {
     countries: state.countries,
+    pagina: state.pagina,
     lim_paginas: state.lim_paginas,
   };
 };
