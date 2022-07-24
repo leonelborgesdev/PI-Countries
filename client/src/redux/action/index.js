@@ -73,6 +73,18 @@ export const addActivitis = (activity) => {
   };
 };
 
+export const deleteActivity = (id) => {
+  return async function () {
+    const response = await fetch("http://localhost:3001/activity/" + id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return response.json();
+  };
+};
+
 export const getPages = (page, lim_paginas) => {
   return function (dispatch) {
     if (page) {

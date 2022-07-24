@@ -44,17 +44,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
   };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    // let expr = /^[a-zA-Z\s]+$/i;//alfabetico
-    //let expr = /^(?=[A-Za-z ]+[0-9]|[0-9]+[A-Za-z ])[A-Za-z0-9 ]{2,12}$/gm;//alfabetico y numerico
     let expr = /^[A-Za-z0-9 ]{2,12}$/i;
-
-    // let esValido = expr.test(value);
-    // console.log(esValido);
-    // if (!esValido) {
-    //   console.log("solo numeros y letras", value);
-    // } else {
-    //   console.log("aceptado", value);
-    // }
     setActivity({
       ...activity,
       [name]: value,
@@ -80,7 +70,6 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
         activity.duration =
           durationValue.durationInt + " " + durationValue.durationSelect;
         if (activity.ch_activity.length > 0) {
-          setlabelError("VALIDADO");
           await dispatch(addActivitis(activity));
           navigate("/countries");
         } else {

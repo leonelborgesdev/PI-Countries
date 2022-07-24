@@ -7,6 +7,7 @@ import {
   orderAlphabetic,
 } from "../../redux/action/index";
 import "./select_stilos.css";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = ({
   getCountrieByName,
@@ -21,7 +22,9 @@ const SearchBar = ({
   const [Countrie, setCountrie] = useState("");
   const handleChange = (activity) => {
     getAllActivitiesCountries(activity, countriesTable);
+    navigate("/countries");
   };
+  const navigate = useNavigate();
   const handleInputChange = (e) => {
     const { value } = e.target;
     console.log(value);
@@ -33,9 +36,11 @@ const SearchBar = ({
   };
   const handleInputChangeOrder = (column, asc_des) => {
     orderAlphabetic(asc_des, column, [...countries]);
+    navigate("/countries");
   };
   const handleChangeContinent = (name) => {
     getAllCountriesByContinent(name, countriesTable);
+    navigate("/countries");
   };
   return (
     <div id="header">

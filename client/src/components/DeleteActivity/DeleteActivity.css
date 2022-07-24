@@ -1,0 +1,64 @@
+.Card_delete{    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.Card_delete1{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    gap: 1rem;
+  }
+.card_div_centrado {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 0px;
+    background-color: #fff;
+    width: 980px;
+    height: 380px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.card_div_centrado > h1{
+    background-color: white;
+}
+.div_table{    
+    width: 930px;
+    height: 250px;
+    border: 1px solid black;
+    overflow: scroll;
+    background-color: white;
+}
+.div_table thead tr th{
+    background-color: white;
+}
+.div_table tbody tr td{
+    background-color: white;
+}
+table.activities_table {
+    table-layout: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+.group_btn_delete {
+    background: white;
+  }
+
+.group_btn_delete > button {
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    border: 1px solid #7d1aaa;
+    padding: 4px 8px;
+    background: #7d1aaa;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  .group_btn_delete > button:hover {
+    background: #551374;
+  }

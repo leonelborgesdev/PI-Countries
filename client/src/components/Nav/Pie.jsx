@@ -40,7 +40,9 @@ const Pie = ({ countries, lim_paginas, pagina }) => {
                 <div className="divNum" key={num}>
                   {pagina.toString() === num.toString() ? (
                     <div className="grupo_botones_selecionado">
-                      <label onClick={handleInputChange}>{num}</label>
+                      <label id={num} onClick={handleInputChange}>
+                        {num}
+                      </label>
                     </div>
                   ) : (
                     <div className="grupo_botones">
