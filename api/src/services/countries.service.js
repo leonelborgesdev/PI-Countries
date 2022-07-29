@@ -38,7 +38,6 @@ const ObjectCountries = async (countriesdb) => {
       activities:
         country.activities.length > 0
           ? country.activities.map((a) => {
-              console.log(a.name);
               return a.name;
             })
           : [],

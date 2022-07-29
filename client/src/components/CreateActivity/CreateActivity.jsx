@@ -70,8 +70,9 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
         activity.duration =
           durationValue.durationInt + " " + durationValue.durationSelect;
         if (activity.ch_activity.length > 0) {
-          await dispatch(addActivitis(activity));
-          navigate("/countries");
+          console.log(activity.ch_activity);
+          // await dispatch(addActivitis(activity));
+          // navigate("/countries");
         } else {
           setlabelError(
             "Seleccione Los Paises a los que se asignara esta actividad"

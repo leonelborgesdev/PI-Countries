@@ -78,7 +78,6 @@ async function addActivitis(req, res) {
 }
 async function deleteActivity(req, res) {
   const { id } = req.params;
-  console.log("id", id);
   if (id.length > 0) {
     const cont = await Activity.destroy({ where: { id: `${id}` } });
     return res.status(200).json(cont);

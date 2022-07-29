@@ -54,6 +54,7 @@ export const getAllCountriesByContinent = (Continent, Countries) => {
   const filterCountries = Countries.filter((Country) =>
     Country.continents.includes(Continent)
   );
+  console.log(Continent, Countries);
   return {
     type: GET_COUNTRIE_BY_CONTINENT,
     payload: filterCountries,
