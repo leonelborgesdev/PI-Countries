@@ -1,7 +1,7 @@
 .divPadre {
   display: flex;
   flex-direction: row;
-  /* width: 600px; */
+  gap: 30px;
   background-color: #fff;
 }
 .divCard1 {
@@ -35,7 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .contries_table {
   table-layout: fixed;
@@ -54,7 +54,7 @@
   gap: 1rem;
 }
 .body_cards {
-  background-color: #d67070;
+  background-color: #3F3351;
 }
 .element_card {
   display: flex;

@@ -32,7 +32,6 @@ const Pie = ({ countries, lim_paginas, pagina }) => {
   return (
     <nav className="navigation_container_pie">
       <div>
-        {console.log("pagina:", pagina)}
         <div className="botones_row">
           {countries.length > 0 ? (
             array.map((num) => {

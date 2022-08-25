@@ -5,32 +5,47 @@
   /* gap: 0.5rem; */
 }
 .card {
-  padding: 0.5rem 0px;
-  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; 
   width: 400px;
   height: 400px;
   border-radius: 15px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  transition: 0.5s;
+}
+.card h3{
+  width: 100%;
+  margin: 5px;
+}
+.card a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.card :hover{
+  background-color: #201531;
+  color: #fff;
+  box-shadow: 0 0 5px #201531,
+  0 0 25px #201531,
+  0 0 50px #201531,
+  0 0 200px #201531;
 }
 .body_cards {
-  background-color: #d67070;
-}
-span {
-  background-color: #fff;
+  background-color: #3F3351;
 }
 .card_img {
   /* border: 1px solid red; */
+  width: 100%;
   height: 200px;
-  overflow: hidden;
 }
 .card_img > img {
-  background-color: #fff;
-  width: 100%;
+  width: 400%;
   height: 100%;
   object-fit: contain;
-}
-
-.card a h3 {
-  background-color: #fff;
 }

@@ -9,7 +9,7 @@ const LandingPage = () => {
     navigate("/countries");
   };
   return (
-    <div>
+    <div className="divLanding">
       <div className="divCabecera">
         <h1>Countries</h1>
       </div>

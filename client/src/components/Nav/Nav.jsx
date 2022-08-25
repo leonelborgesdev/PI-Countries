@@ -8,8 +8,10 @@ import banderas_icono from "../../assets/banderas_icono.png";
 import activity_add from "../../assets/activity_add.png";
 import activity_delete from "../../assets/activity_delete.png";
 import home from "../../assets/home.png";
-const Nav = (getAllCountries) => {
-  const handleOnclick = (e) => {
+import { useEffect } from "react";
+
+const Nav = ({ getAllCountries }) => {
+  const handleOnclick = () => {
     getAllCountries();
   };
   return (
@@ -19,7 +21,7 @@ const Nav = (getAllCountries) => {
           <img src={home} width="60" height="50" alt="image.png" />
         </Link>
       </div>
-      <div className="card_imagePng">
+      <div className="card_imagePng" onClick={handleOnclick}>
         <Link to="/countries">
           <img src={banderas_icono} width="60" height="50" alt="image.png" />
         </Link>

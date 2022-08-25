@@ -55,6 +55,10 @@ const Country = ({
                     countries.indexOf(countrie) >= min && (
                       <div className="card" key={countrie.id}>
                         <Link to={`/countries/${countrie.id}`}>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
                           <div className="card_img">
                             <img src={countrie.flags} alt="" />
                           </div>
