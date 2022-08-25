@@ -75,6 +75,7 @@
 }
 .group_btn1 > button:hover {
   background: #4a498f;
+  cursor: pointer;
 }
 .divDescripcion {
   padding: 0px 0.5rem;
