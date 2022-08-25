@@ -91,7 +91,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
       <div className="element">
         <div className="card1">
           <form onSubmit={handleSubmit}>
-            <h2>Create Your Tourist Activity</h2>
+            <h1>Create Your Tourist Activity</h1>
             <div className="padre">
               <div id="div2">
                 <div className="padre">
@@ -202,46 +202,44 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
                   <button type="submit">Crear</button>
                 </div>
               </div>
-              <div className="padre">
-                <div id="div1">
-                  <table border="1" className="contries_table">
-                    <thead>
+              <div id="div1">
+                <table border="1" className="contries_table">
+                  <thead>
+                    <tr>
+                      <th>N°</th>
+                      <th>Id</th>
+                      <th>Countrie</th>
+                      <th>Capital</th>
+                      <th>Seleccionar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {countries.length > 0 ? (
+                      countries.map((countrie) => {
+                        return (
+                          <tr key={countrie.id}>
+                            <td>{countries.indexOf(countrie) + 1}</td>
+                            <td>{countrie.id}</td>
+                            <td>{countrie.name}</td>
+                            <td>{countrie.capital}</td>
+                            <td>
+                              <input
+                                type="checkbox"
+                                id={countrie.id}
+                                value={countrie.id}
+                                onChange={handleInputChange_check}
+                              ></input>
+                            </td>
+                          </tr>
+                        );
+                      })
+                    ) : (
                       <tr>
-                        <th>N°</th>
-                        <th>Id</th>
-                        <th>Countrie</th>
-                        <th>Capital</th>
-                        <th>Seleccionar</th>
+                        <td>No se encontro Paises</td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {countries.length > 0 ? (
-                        countries.map((countrie) => {
-                          return (
-                            <tr key={countrie.id}>
-                              <td>{countries.indexOf(countrie) + 1}</td>
-                              <td>{countrie.id}</td>
-                              <td>{countrie.name}</td>
-                              <td>{countrie.capital}</td>
-                              <td>
-                                <input
-                                  type="checkbox"
-                                  id={countrie.id}
-                                  value={countrie.id}
-                                  onChange={handleInputChange_check}
-                                ></input>
-                              </td>
-                            </tr>
-                          );
-                        })
-                      ) : (
-                        <tr>
-                          <td>No se encontro Paises</td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
+                    )}
+                  </tbody>
+                </table>
               </div>
             </div>
           </form>

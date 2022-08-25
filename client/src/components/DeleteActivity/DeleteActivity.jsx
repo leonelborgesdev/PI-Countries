@@ -20,7 +20,7 @@ const DeleteActivity = () => {
       <Nav dir={"/countries"} />
       <div className="Card_delete">
         <div className="card_div_centrado">
-          <h1>DeleteActivity</h1>
+          <h1>Delete Activities</h1>
           <div className="div_table">
             <div className="Card_delete1">
               {activities.length > 0 ? (

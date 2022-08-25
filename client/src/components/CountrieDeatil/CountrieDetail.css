@@ -1,7 +1,6 @@
 .divPadre {
   display: flex;
   flex-direction: row;
-  gap: 30px;
 }
 .divCard1 {
   display: flex;
@@ -9,7 +8,7 @@
   justify-content: center;
   flex-direction: column;
   height: 500px;
-  width: 50%;
+  width: 48%;
 }
 
 .divCard2Scroll {
@@ -29,7 +28,7 @@
 .divCard2 {
   justify-content: center;
   height: 400px;
-  width: 42%;
+  width: 48%;
 }
 .divCard2 > h1 {
   color: #fff;
