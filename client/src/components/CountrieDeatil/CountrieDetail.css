@@ -2,34 +2,37 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
-  background-color: #fff;
 }
 .divCard1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 500px;
-  width: 400px;
-  background-color: #fff;
+  width: 50%;
 }
 
 .divCard2Scroll {
   justify-content: "center";
   overflow: scroll;
   height: 400px;
-  width: 400px;
+  width: 100%;
   background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
 }
 .divCard2Scroll > table {
   /* height: 400px; */
-  width: 370px;
+  width: 100%;
   background-color: #fff;
 }
 .divCard2 {
   justify-content: center;
   height: 400px;
-  /* width: 500px; */
-  background-color: #fff;
+  width: 42%;
 }
 .divCard2 > h1 {
-  background-color: #fff;
+  color: #fff;
 }
 .cards {
   display: flex;
@@ -39,7 +42,6 @@
 }
 .contries_table {
   table-layout: fixed;
-  background-color: #fff;
 }
 .contries_table thead tr th {
   background-color: #fff;
@@ -62,21 +64,23 @@
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  width: 900px;
+  width: 94%;
   height: 500px;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: #201531;
+  gap: 50px ;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 .element_card div p {
-  background-color: #fff;
+  color: #fff;
+  margin: 5px;
 }
 
 .element_card div h2 {
-  background-color: #fff;
+  color: #fff;
+  margin: 5px;
 }
 .card_img {
-  /* border: 1px solid red; */
   height: 200px;
   overflow: hidden;
 }
