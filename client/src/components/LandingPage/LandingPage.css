@@ -7,13 +7,14 @@
 }
 
 .divCabecera h1{
-  padding: 0px 0.5rem;
+  /* padding: 0px 0.5rem; */
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 0px; 
 }
 .divCuerpo {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +23,38 @@
   background: #1F1D36;
   gap: 50px;
   height: 440px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
+  /* border: 1px solid red; */
+  }
+.divCuerpo span{
+  position: absolute;
+  display: block;
+}
+.divCuerpo span:nth-child(1){
+  top: 0px; 
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #8354c9);
+  animation: animate1 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate1_l{
+  0%{
+    left: -100%;
+  }
+  50%, 100%{
+    left: 100%;
+  }
+}
+.divCuerpo span:nth-child(2){
+  top: 440px; 
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #8354c9);
+  animation: animate3 1s linear infinite;
+  animation-delay: 1.5s;
 }
 .group_btn1 {
   background: #1F1D36;
@@ -60,29 +92,29 @@
   font-size: 400%;
   color: #fff;
 }
-.divDer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 15px;
-  width: 500;
-  height: 500;
-  gap: 1rem;
-}
 .card_image {
   display: flex;
-  padding: 1rem 0px;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
   border-radius: 15px;
-  background-color: #fff;
-  width: 500;
-  height: 500;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
-.card_image > img {
-  background-color: #fff;
-  border-radius: 15px;
+
+.card_image img{
+  bottom: 0px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #8354c9;
+  z-index: 1;
+}
+.card_image img:hover{
+  box-shadow: 0 0 10px #8354c9,
+  0 0 30px #8354c9,
+  0 0 50px #8354c9;
+}
+.divreflejo{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
 }

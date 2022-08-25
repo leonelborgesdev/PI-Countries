@@ -13,25 +13,22 @@ const LandingPage = () => {
       <div className="divCabecera">
         <h1>Countries</h1>
       </div>
-      <div className="divCuerpo">
-        <div className="divDescripcion">
-          <h3>Date una aventura y conoce nuestros Paises,</h3>
-          <h3> Continentes, Capitales,Banderas, etc. Y crea tus </h3>
-          <h3> propias Actividades Turisticas</h3>
-          <div className="group_btn1">
-            <button type="submit" onClick={handleSubmit}>
-              Ingresar
-            </button>
+      <div className="divreflejo">
+        <div className="divCuerpo">
+          <span></span>
+          <span></span>
+          <div className="divDescripcion">
+            <h3>Date una aventura y conoce nuestros Paises,</h3>
+            <h3> Continentes, Capitales, Banderas, etc. Y crea tus </h3>
+            <h3> propias Actividades Turisticas</h3>
+            <div className="group_btn1">
+              <button type="submit" onClick={handleSubmit}>
+                Ingresar
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="divDer">
           <div className="card_image">
-            <img
-              src={loading_globe_world}
-              width="500"
-              height="480"
-              alt="image.gif"
-            />
+            <img src={loading_globe_world} alt="gif" />
           </div>
         </div>
       </div>
