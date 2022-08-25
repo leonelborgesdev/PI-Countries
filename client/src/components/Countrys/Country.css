@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   /* gap: 0.5rem; */
+  min-height: 150vh;
 }
 .card_contry {
   position: relative;

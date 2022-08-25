@@ -45,9 +45,9 @@ const Pie = ({ countries, lim_paginas, pagina }) => {
                     </div>
                   ) : (
                     <div className="grupo_botones">
-                      <label id={num} onClick={handleInputChange}>
+                      <a href="#inicio" id={num} onClick={handleInputChange}>
                         {num}
-                      </label>
+                      </a>
                     </div>
                   )}
                 </div>

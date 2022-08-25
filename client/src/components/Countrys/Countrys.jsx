@@ -43,7 +43,7 @@ const Country = ({
     return <img src={globo1} alt="image.gif" />;
   }
   return (
-    <div>
+    <div id="inicio">
       <Nav dir={"../"} />
       <div className="body_cards">
         <div className="cards">

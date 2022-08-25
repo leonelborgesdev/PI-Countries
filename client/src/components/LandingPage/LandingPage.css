@@ -36,14 +36,14 @@
   width: 100%;
   height: 5px;
   background: linear-gradient(90deg, transparent, #8354c9);
-  animation: animate1 1s linear infinite;
+  animation: animate1_l 1s linear infinite;
   animation-delay: 0.5s;
 }
 @keyframes animate1_l{
   0%{
     left: -100%;
   }
-  50%, 100%{
+  50%,100%{
     left: 100%;
   }
 }
@@ -53,8 +53,16 @@
   width: 100%;
   height: 5px;
   background: linear-gradient(270deg, transparent, #8354c9);
-  animation: animate3 1s linear infinite;
-  animation-delay: 1.5s;
+  animation: animate2_l 1s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate2_l{
+  0%{
+    right: -100%;
+  }
+  50%,100%{
+    right: 100%;
+  }
 }
 .group_btn1 {
   background: #1F1D36;
