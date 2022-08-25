@@ -26,9 +26,10 @@
   width: 100%;
   gap: 1rem;
   height: 72px;
-  background: #3F3351;
-  bottom: 0;
-  position: sticky;
+  background: #372b47;
+  bottom: 0px;
+  margin-top: 50px;
+  position: fixed;
 }
 .navigation_container > a {
   background: #1F1D36;
@@ -39,7 +40,7 @@
   justify-content: center;
   flex-direction: row;
   padding: 1px 1rem;
-  background: #3F3351;
+  background: #372b47;
 }
 .grupo_botones {
   display: flex;
@@ -50,15 +51,15 @@
   height: 30px;
   width: 15px;
   border: 1px black solid;
-  background: #3F3351;
+  background: #201531;
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
 .grupo_botones > label {
-  background: #3F3351;
+  background: #201531;
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
 .divNum{
-  background: #3F3351;
+  background: #372b47;
 }
 .grupo_botones :hover {
   display: flex;
@@ -66,7 +67,7 @@
   align-items: center;
   justify-content: center;
   border-color: aqua;
-  background-color: rgba(9, 223, 27, 0.466);
+  background-color:#6b43a7;
   border-radius: 15px;
   height: 30px;
   width: 10px;
@@ -78,14 +79,14 @@
   align-items: center;
   justify-content: center;
   border-color: aqua;
-  background-color: rgba(9, 223, 27, 0.466);
+  background-color: #6b43a7;
   border-radius: 15px;
   height: 30px;
   width: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
 }
 .grupo_botones_selecionado > label {
-  background-color: rgba(9, 223, 27, 0.466);
+  background-color: #6b43a7;
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
 .card_imagePng {

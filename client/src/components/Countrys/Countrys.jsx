@@ -53,12 +53,12 @@ const Country = ({
                 <React.Fragment key={countrie.id}>
                   {countries.indexOf(countrie) < max &&
                     countries.indexOf(countrie) >= min && (
-                      <div className="card" key={countrie.id}>
+                      <div className="card_contry" key={countrie.id}>
                         <Link to={`/countries/${countrie.id}`}>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
+                          <span className="loader"></span>
+                          <span className="loader"></span>
+                          <span className="loader"></span>
+                          <span className="loader"></span>
                           <div className="card_img">
                             <img src={countrie.flags} alt="" />
                           </div>
@@ -72,7 +72,7 @@ const Country = ({
                             countrie.activities.map((activity) => {
                               return (
                                 <React.Fragment key={activity}>
-                                  <span>[{activity}]</span>
+                                  <>[{activity}]</>
                                 </React.Fragment>
                               );
                             })

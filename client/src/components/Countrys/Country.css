@@ -4,44 +4,118 @@
   justify-content: center;
   /* gap: 0.5rem; */
 }
-.card {
+.card_contry {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff; 
+  background-color: #201531; 
   width: 400px;
   height: 400px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
   transition: 0.5s;
+  overflow: hidden;
+  margin-bottom: 80px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
 }
-.card h3{
-  width: 100%;
-  margin: 5px;
+.card_contry h3{
+  margin: 0px;
 }
-.card a{
+.card_contry a{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #9d7ad1;
   width: 100%;
   height: 100%;
 }
-.card :hover{
-  background-color: #201531;
-  color: #fff;
-  box-shadow: 0 0 5px #201531,
-  0 0 25px #201531,
-  0 0 50px #201531,
-  0 0 200px #201531;
+.card_contry :hover{
+  background-color: #8354c9;
+  color: #000;
+  box-shadow: 0 0 5px #8354c9,
+  0 0 25px #8354c9,
+  0 0 50px #8354c9,
+  0 0 200px #8354c9;
+}
+.card_contry .loader{
+  position: absolute;
+  display: block;
+}
+.card_contry .loader:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #8354c9);
+  animation: animate1 2s linear infinite;
+  animation-delay: 0s;
+}
+@keyframes animate1{
+  0%{
+    left: -100%;
+  }
+  50%,100%{
+    left: 100%;
+  }
+}
+.card_contry .loader:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #8354c9);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate3{
+  0%{
+    right: -100%;
+  }
+  50%,100%{
+    right: 100%;
+  }
+}
+.card_contry .loader:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #8354c9);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate2{
+  0%{
+    top: -100%;
+  }
+  50%,100%{
+    top: 100%;
+  }
+}
+.card_contry .loader:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(3600deg, transparent, #8354c9);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+@keyframes animate4{
+  0%{
+    bottom: -100%;
+  }
+  50%,100%{
+    bottom: 100%;
+  }
 }
 .body_cards {
   background-color: #3F3351;
 }
 .card_img {
   /* border: 1px solid red; */
-  width: 100%;
+  width: 96%;
   height: 200px;
 }
 .card_img > img {
