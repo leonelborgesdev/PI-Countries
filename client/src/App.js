@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./components/Nav/Nav";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Countrys from "./components/Countrys/Countrys";
 import CountrysDetail from "./components/CountrieDeatil/CountrieDetail";

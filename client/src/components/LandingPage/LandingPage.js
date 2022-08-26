@@ -11,7 +11,7 @@ const LandingPage = () => {
   return (
     <div className="divLanding">
       <div className="divCabecera">
-        <h1>Countries</h1>
+        <h2 data-text="Countries">Countries</h2>
       </div>
       <div className="divreflejo">
         <div className="divCuerpo">
@@ -27,10 +27,10 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
-          <div className="card_image">
-            <img src={loading_globe_world} alt="gif" />
-          </div>
         </div>
+      </div>
+      <div className="card_image">
+        <img src={loading_globe_world} alt="gif" />
       </div>
     </div>
   );

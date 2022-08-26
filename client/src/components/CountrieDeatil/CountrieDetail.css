@@ -12,18 +12,18 @@
 }
 
 .divCard2Scroll {
-  justify-content: "center";
+  justify-content: center;
   overflow: scroll;
   height: 400px;
   width: 100%;
-  background-color: #fff;
+  background-color: #201531;
   border-radius: 5px;
-  border: 1px solid #fff;
+  border: 1px solid #8354c9;
 }
 .divCard2Scroll > table {
   /* height: 400px; */
   width: 100%;
-  background-color: #fff;
+  background-color: #201531;
 }
 .divCard2 {
   justify-content: center;
@@ -31,7 +31,7 @@
   width: 48%;
 }
 .divCard2 > h1 {
-  color: #fff;
+  color: #8354c9;
 }
 .cards {
   display: flex;
@@ -41,12 +41,6 @@
 }
 .contries_table {
   table-layout: fixed;
-}
-.contries_table thead tr th {
-  background-color: #fff;
-}
-.contries_table thead tr td {
-  background-color: #fff;
 }
 .element {
   display: flex;
@@ -71,12 +65,12 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 .element_card div p {
-  color: #fff;
+  color: #8354c9;
   margin: 5px;
 }
 
 .element_card div h2 {
-  color: #fff;
+  color: #8354c9;
   margin: 5px;
 }
 .card_img {
@@ -89,9 +83,20 @@
   object-fit: contain;
 }
 
-.contries_table tbody tr th {
-  background-color: #fff;
-}
 .contries_table tbody tr td {
-  background-color: #fff;
+  background-color: #201531;
+  color: #8354c9;
+}
+.contries_table thead tr th {
+  background-color: #190f29;
+  font-size: 20px;
+  color: #9f67f3;
+  /* border: 10px solid #9f67f3 */
+}
+.divCard2Scroll::-webkit-scrollbar{
+  width: 7px;
+}
+.divCard2Scroll::-webkit-scrollbar-thumb{
+  background: #9f67f3;
+  border-radius: 5px;
 }
