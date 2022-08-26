@@ -101,7 +101,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
                     <h4>Duration:</h4>
                     <h4>Season:</h4>
                   </div>
-                  <div id="div_colum">
+                  <div className="div_colum_input">
                     <h4>
                       <input
                         type="text"

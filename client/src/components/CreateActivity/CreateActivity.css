@@ -14,7 +14,7 @@
   align-items: center;
 }
 .group_btn > p {
-  color: red;
+  color: #8280ff;
 }
 .group_btn > button {
   height: 40px;
@@ -44,7 +44,6 @@
 .divSelctSeason {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: center;
   background-color: #fff;
 }
@@ -55,13 +54,15 @@
 .divTextRange {
   display: flex;
   flex-direction: row;
-  color: #000;
+  color: #4a498f;
   justify-content: center;
-  background-color: #fff;
+  background-color: #201531;
 }
-.divTextRange > input {
+.div_colum_input input{
   width: 100%;
-  background-color: #201531;;
+}
+.div_colum_input{
+  width: 100%;
 }
 .card1 {
   display: flex;
@@ -75,10 +76,7 @@
   border-radius: 15px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
-table.contries_table {
-  table-layout: fixed;
-  background-color: #fff;
-}
+
 #div_row {
   display: flex;
   flex-direction: row;
@@ -91,7 +89,7 @@ table.contries_table {
   width: 200px;
 }
 #div_colum > h4 {
-  color: #fff;
+  color: #9f67f3;
 }
 #div_input {
   padding: 0px 0.5rem;
@@ -103,21 +101,34 @@ table.contries_table {
   width: 50%;
 }
 #div1 {
+  justify-content: center;
   overflow: scroll;
   height: 300px;
   width: 50%;
-  background-color: #fff;
-  margin-right: 30px;
-}
-#div1 table tbody tr td {
-  background-color: #fff;
-}
-#div1 table thead tr th {
-  background-color: #fff;
+  background-color: #201531;
+  border-radius: 5px;
+  border: 1px solid #8354c9;
+  margin-right: 40px;
 }
 .card1 form h1{
-  color: #fff;
+  color: #9f67f3;
 }
 .card1 form{
   width: 100%;
+}
+#div1 table tbody tr td {
+  background-color: #201531;
+  color: #8354c9;
+}
+#div1 table thead tr th {
+  background-color: #190f29;
+  font-size: 20px;
+  color: #9f67f3;
+}
+#div1::-webkit-scrollbar{
+  width: 7px;
+}
+#div1::-webkit-scrollbar-thumb{
+  background: #38343d;
+  border-radius: 5px;
 }

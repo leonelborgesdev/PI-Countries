@@ -41,6 +41,7 @@
 }
 .contries_table {
   table-layout: fixed;
+  width: 100%;
 }
 .element {
   display: flex;
