@@ -5,6 +5,7 @@ import {
   getAllActivitiesCountries,
   getAllCountriesByContinent,
   orderAlphabetic,
+  getAllCountries,
 } from "../../redux/action/index";
 import "./select_stilos.css";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ const SearchBar = ({
   getCountrieByName,
   getAllCountriesByContinent,
   getAllActivitiesCountries,
+  getAllCountries,
   orderAlphabetic,
   activities,
   countries,
@@ -30,8 +32,11 @@ const SearchBar = ({
     console.log(value);
     if (value.length > 0) {
       setCountrie(value);
+      getCountrieByName(value);
     } else {
+      console.log("entre");
       setCountrie("");
+      getAllCountries();
     }
   };
   const handleInputChangeOrder = (column, asc_des) => {
@@ -54,7 +59,6 @@ const SearchBar = ({
         }}
       >
         <ul className="lista_select">
-          <label id="name_item">Nombre:</label>
           <input
             id="otro_item"
             type="text"
@@ -63,7 +67,7 @@ const SearchBar = ({
             value={Countrie}
             onChange={handleInputChange}
           />
-          <input id="otro_item" type="submit" value="Buscar" />
+          {/* <input id="otro_item" type="submit" value="Buscar" /> */}
           <li>
             Activities
             <ul>
@@ -143,6 +147,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getCountrieByName: (name) => dispatch(getCountrieByName(name)),
+    getAllCountries: () => dispatch(getAllCountries()),
     getAllActivitiesCountries: (activity, countries) =>
       dispatch(getAllActivitiesCountries(activity, countries)),
     getAllCountriesByContinent: (continent, countries) =>

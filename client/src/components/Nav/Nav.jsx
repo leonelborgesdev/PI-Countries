@@ -8,7 +8,6 @@ import banderas_icono from "../../assets/banderas_icono.png";
 import activity_add from "../../assets/activity_add.png";
 import activity_delete from "../../assets/activity_delete.png";
 import home from "../../assets/home.png";
-import { useEffect } from "react";
 
 const Nav = ({ getAllCountries }) => {
   const handleOnclick = () => {
