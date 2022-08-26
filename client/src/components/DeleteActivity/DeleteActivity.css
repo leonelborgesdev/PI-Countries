@@ -25,34 +25,35 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 .card_div_centrado > h1{
-  margin: 10px;
-    color: #fff;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #9f67f3;
 }
 .div_table{
-  justify-content: "center";
+  justify-content: center;
   overflow: scroll;
-  height: 270px;
-  width: 94%;
-  background-color: #fff;
+  height: 300px;
+  width: 96%;
+  background-color: #201531;
   border-radius: 5px;
-  border: 1px solid #fff;
+  border: 1px solid #8354c9;
+  margin-bottom: 20px;
 }
 .div_table thead tr th{
-    background-color: white;
+  background-color: #190f29;
+  font-size: 20px;
+  color: #9f67f3;
 }
 .div_table tbody tr td{
-    background-color: white;
+  background-color: #201531;
+  color: #8354c9;
 }
-table.activities_table {
+.activities_table {
   border-radius: 5px;
   table-layout: fixed;
   width: 100%;
   background-color: #fff;
 }
-.group_btn_delete {
-    background: white;
-  }
-
 .group_btn_delete > button {
     height: 30px;
     width: 80px;
@@ -65,4 +66,11 @@ table.activities_table {
   }
   .group_btn_delete > button:hover {
     background: #551374;
+  }
+  .div_table::-webkit-scrollbar{
+    width: 7px
+  }
+  #div1::-webkit-scrollbar-thumb{
+    background: #38343d;
+    border-radius: 5px;
   }
