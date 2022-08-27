@@ -69,7 +69,7 @@ const SearchBar = ({
           />
           {/* <input id="otro_item" type="submit" value="Buscar" /> */}
           <li>
-            Activities
+            <h3>Activities</h3>
             <ul>
               {activities.length > 0 &&
                 activities.map((activity) => {
@@ -78,14 +78,14 @@ const SearchBar = ({
                       key={activity.id}
                       onClick={() => handleChange(activity.name)}
                     >
-                      {activity.name}
+                      <h3>{activity.name}</h3>
                     </li>
                   );
                 })}
             </ul>
           </li>
           <li>
-            Continents
+            <h3>Continents</h3>
             <ul>
               {continents.length > 0 &&
                 continents.map((elem) => {
@@ -94,23 +94,24 @@ const SearchBar = ({
                       key={elem.continents}
                       onClick={() => handleChangeContinent(elem.continents)}
                     >
-                      {elem.continents}
+                      <h3>{elem.continents}</h3>
                     </li>
                   );
                 })}
             </ul>
           </li>
           <li>
-            Ordenar
+            <h3>Ordenar</h3>
+
             <ul>
               <li>
-                Countrie
+                <h3>Countries</h3>
                 <ul>
                   <li onClick={() => handleInputChangeOrder("name", true)}>
-                    Ascendente
+                    <h3>Ascendente</h3>
                   </li>
                   <li onClick={() => handleInputChangeOrder("name", false)}>
-                    Descendente
+                    <h3>Descendente</h3>
                   </li>
                 </ul>
               </li>

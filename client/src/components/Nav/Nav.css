@@ -53,18 +53,20 @@
   padding: 0px 0.5rem;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
-  height: 30px;
-  width: 15px;
+  border-radius: 50%;
+  height: 35px;
+  width: 20px;
   border: 1px black solid;
   background: #201531;
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
-.grupo_botones > a {
-  color: #fff;
-  text-decoration: none;
+.grupo_botones a h3 {
+  color: #6b43a7;
   background: #201531;
-  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
+  padding: 0px 0.2rem;
+}
+.grupo_botones a {
+  text-decoration: none;
 }
 .divNum{
   background: #372b47;
@@ -76,6 +78,7 @@
   justify-content: center;
   border-color: aqua;
   background-color:#6b43a7;
+  color: #201531;
   border-radius: 15px;
   height: 30px;
   width: 10px;
@@ -95,7 +98,6 @@
 }
 .grupo_botones_selecionado > a {
   background-color: #6b43a7;
-  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
 .card_imagePng {
   display: flex;
@@ -103,7 +105,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  background: white;
+  background: #4a498f;
   margin-right: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
@@ -112,11 +114,13 @@
   box-shadow: 0 0 25px #8354c9;
 }
 .card_imagePng > a {
-  background: white;
+  background: #4a498f;
+  width: 100%;
   border-radius: 15px;
 }
 .card_imagePng a img {
-  background: white;
+  background: #4a498f;
+  width: 100%;
   border-radius: 15px;
 }
 .card_imagePng a span {
@@ -127,8 +131,8 @@
   height: 100%;
 }
 
-label {
-  color: white;
+.grupo_botones_selecionado h3 {
+  color: #1F1D36;
   padding: 0px 0.2rem;
 }
 .navigation_container a {

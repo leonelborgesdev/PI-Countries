@@ -7,7 +7,7 @@ import {
   getAllActivities,
   changeLoading,
 } from "../../redux/action/index";
-import globo1 from "../../assets/globo1.gif";
+// import globo1 from "../../assets/globo1.gif";
 import Pie from "../Nav/Pie";
 import "./Country.css";
 

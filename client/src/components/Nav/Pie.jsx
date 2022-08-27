@@ -39,14 +39,16 @@ const Pie = ({ countries, lim_paginas, pagina }) => {
                 <div className="divNum" key={num}>
                   {pagina.toString() === num.toString() ? (
                     <div className="grupo_botones_selecionado">
-                      <label id={num} onClick={handleInputChange}>
+                      <h3 id={num} onClick={handleInputChange}>
                         {num}
-                      </label>
+                      </h3>
                     </div>
                   ) : (
                     <div className="grupo_botones">
-                      <a href="#inicio" id={num} onClick={handleInputChange}>
-                        {num}
+                      <a href="#inicio">
+                        <h3 id={num} onClick={handleInputChange}>
+                          {num}
+                        </h3>
                       </a>
                     </div>
                   )}

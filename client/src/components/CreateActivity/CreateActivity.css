@@ -20,14 +20,15 @@
   height: 40px;
   width: 120px;
   border-radius: 10px;
-  border: 1px solid #8280ff;
+  border: 1px solid #4a498f;;
   padding: 8px 16px;
-  background: #8280ff;
+  background: #4a498f;;
   font-size: 18px;
-  color: whitesmoke;
+  color: #fff;
+  cursor: pointer;
 }
 .group_btn > button:hover {
-  background: #4a498f;
+  background: #8280ff
 }
 #season {
   width: 200%;
