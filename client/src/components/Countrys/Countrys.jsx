@@ -40,7 +40,8 @@ const Country = ({
   }
   //---------------pagina-1 : 9-cards-------pagina>=2 : 10 cards--------
   if (isLoading) {
-    return <img src={globo1} alt="image.gif" />;
+    //return <img src={globo1} alt="image.gif" />;
+    return <p>Cargando...</p>;
   }
   return (
     <div id="inicio">

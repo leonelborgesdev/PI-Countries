@@ -12,6 +12,12 @@
   margin-bottom: 20px;
   z-index: 1;
 }
+.container_butons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 .divLinkActivity {
   background: #1F1D36;
   padding: 0px 2rem;
@@ -138,4 +144,18 @@ label {
 
 .navigation_container a:focus {
   color: #5a58d1;
+}
+@media screen and (max-width : 900px) {
+  .navigation_container{
+    height: 140px;
+  }
+  .container_butons{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media screen and (max-width : 440px) {
+  .navigation_container{
+    height: 180px;
+  }
 }

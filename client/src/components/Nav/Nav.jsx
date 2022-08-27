@@ -15,26 +15,30 @@ const Nav = ({ getAllCountries }) => {
   };
   return (
     <nav className="navigation_container">
-      <div className="card_imagePng">
-        <Link to="/">
-          <img src={home} width="60" height="50" alt="image.png" />
-        </Link>
-      </div>
-      <div className="card_imagePng" onClick={handleOnclick}>
-        <Link to="/countries">
-          <img src={banderas_icono} width="60" height="50" alt="image.png" />
-        </Link>
+      <div className="container_butons">
+        <div className="card_imagePng">
+          <Link to="/">
+            <img src={home} width="60" height="50" alt="image.png" />
+          </Link>
+        </div>
+        <div className="card_imagePng" onClick={handleOnclick}>
+          <Link to="/countries">
+            <img src={banderas_icono} width="60" height="50" alt="image.png" />
+          </Link>
+        </div>
       </div>
       <SearchBar />
-      <div className="card_imagePng">
-        <Link to="/activityDelete">
-          <img src={activity_delete} width="50" height="50" alt="image.png" />
-        </Link>
-      </div>
-      <div className="card_imagePng">
-        <Link to="/activity">
-          <img src={activity_add} width="50" height="50" alt="image.png" />
-        </Link>
+      <div className="container_butons">
+        <div className="card_imagePng">
+          <Link to="/activityDelete">
+            <img src={activity_delete} width="50" height="50" alt="image.png" />
+          </Link>
+        </div>
+        <div className="card_imagePng">
+          <Link to="/activity">
+            <img src={activity_add} width="50" height="50" alt="image.png" />
+          </Link>
+        </div>
       </div>
     </nav>
   );

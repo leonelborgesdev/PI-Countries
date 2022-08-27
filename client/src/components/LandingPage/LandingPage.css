@@ -5,7 +5,11 @@
   width: 100%;
   flex-direction: column;
 }
-
+.divCabecera{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .divCabecera h2{
   position: relative;
   font-size: 6em;
@@ -43,8 +47,6 @@
   gap: 50px;
   height: 440px;
   overflow: hidden;
-  /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
-  /* border: 1px solid red; */
   }
 .divCuerpo span{
   position: absolute;
@@ -91,7 +93,10 @@
   justify-content: center;
   align-items: center;
 }
-.group_btn1 > button {
+.group_btn1 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 120px;
   border-radius: 10px;
@@ -99,7 +104,7 @@
   padding: 8px 16px;
   background: #8280ff;
   font-size: 18px;
-  color: whitesmoke;
+  color: #fff;
 }
 .group_btn1 > button:hover {
   background: #4a498f;
@@ -109,7 +114,7 @@
   padding: 0px 0.5rem;
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 40%;
   flex-direction: column;
   justify-content: right;
   background: #1F1D36;
@@ -117,6 +122,7 @@
 
 .divDescripcion > h3 {
   background: #1F1D36;
+  width: 100%;
   color: #fff;
 }
 
@@ -152,4 +158,79 @@
   width: 100%;
   height: 530px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+@media screen and (max-width: 1200px) {
+  .divCuerpo{
+    height: 330px;
+  }
+  .divreflejo{
+    height: 440px;
+  }
+  .card_image img{
+    width: 440px;
+    height: 440px;
+  }
+  .divCabecera h2{
+    font-size: 5em;
+  }
+  .divDescripcion h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .divCuerpo{
+    height: 230px;
+  }
+  .divreflejo{
+    height: 340px;
+  }
+  .card_image img{
+    width: 340px;
+    height: 340px;
+  }
+  .divCabecera h2{
+    font-size: 4em;
+  }
+  .divDescripcion h3 {
+    font-size: 14px;
+  }
+  .group_btn1 button {
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .divDescripcion h3 {
+    font-size: 12px;
+    margin: 5px;
+  }
+  .divCuerpo{
+    height: 230px;
+  }
+  .card_image{    
+    right: 30px;
+  }
+  .group_btn1 {
+    margin-top: 10px;
+  }
+  .group_btn1 button {
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .divCabecera h2{
+    font-size: 2em;
+  }
+  .divDescripcion h3 {
+    font-size: 10px;
+    margin: 0px;
+  }
+  .group_btn1 button {
+    height: 24px;
+    width: 70px;
+    font-size: 10px;
+  }
 }
