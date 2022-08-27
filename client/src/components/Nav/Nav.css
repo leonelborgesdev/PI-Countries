@@ -61,11 +61,22 @@
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
 .grupo_botones a h3 {
-  color: #6b43a7;
-  background: #201531;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 20px;
   padding: 0px 0.2rem;
 }
 .grupo_botones a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 20px;
+  color: #8354c9;
   text-decoration: none;
 }
 .divNum{
@@ -73,27 +84,24 @@
 }
 .grupo_botones :hover {
   display: flex;
-  padding: 0px 0.7rem;
+  padding: 0px 0.5rem;
   align-items: center;
   justify-content: center;
-  border-color: aqua;
-  background-color:#6b43a7;
+  background-color: #6b43a7;
   color: #201531;
-  border-radius: 15px;
-  height: 30px;
-  width: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
+  border-radius: 50%;
+  height: 35px;
+  width: 20px;
 }
 .grupo_botones_selecionado {
   display: flex;
-  padding: 0px 0.7rem;
+  padding: 0px 0.5rem;
   align-items: center;
   justify-content: center;
-  border-color: aqua;
   background-color: #6b43a7;
-  border-radius: 15px;
-  height: 30px;
-  width: 10px;
+  border-radius: 50%;
+  height: 35px;
+  width: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
 }
 .grupo_botones_selecionado > a {

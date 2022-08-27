@@ -32,8 +32,8 @@
 
 }
 .divCabecera h2:hover{
-  color: rgba(255, 255, 255, 0.596);
-  filter: drop-shadow(0 0 15px #8354c9) drop-shadow(0 0 15px #8354c9);
+  color: #8354c933;
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff);
 
 }
 .divCuerpo {
@@ -100,30 +100,35 @@
   height: 40px;
   width: 120px;
   border-radius: 10px;
-  border: 1px solid #8280ff;
+  border: 1px solid #4a498f;
   padding: 8px 16px;
-  background: #8280ff;
+  background: #4a498f;
   font-size: 18px;
   color: #fff;
 }
 .group_btn1 > button:hover {
-  background: #4a498f;
+  background: #8280ff;
+  color: #fff;
   cursor: pointer;
 }
 .divDescripcion {
   padding: 0px 0.5rem;
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 50%;
   flex-direction: column;
   justify-content: right;
   background: #1F1D36;
 }
-
+.divDescripcion :hover{
+  color: #9f74df;
+}
 .divDescripcion > h3 {
   background: #1F1D36;
+  font-size: 30px;
+  margin: 10px;
   width: 100%;
-  color: #fff;
+  color: #8354c9;
 }
 
 .divCabecera > h1 {
@@ -134,6 +139,7 @@
   display: flex;
   flex-wrap: wrap;
   border-radius: 15px;
+  left: 10px;
   position: relative;
 }
 
@@ -201,6 +207,9 @@
   }
 }
 @media screen and (max-width: 750px) {
+  .divDescripcion {
+    width: 40%;
+  }
   .divDescripcion h3 {
     font-size: 12px;
     margin: 5px;
@@ -208,7 +217,8 @@
   .divCuerpo{
     height: 230px;
   }
-  .card_image{    
+  .card_image{
+    left: 10px;    
     right: 30px;
   }
   .group_btn1 {
@@ -221,6 +231,9 @@
   }
 }
 @media screen and (max-width: 450px) {
+  .divDescripcion {
+    width: 30%;
+  }
   .divCabecera h2{
     font-size: 2em;
   }
