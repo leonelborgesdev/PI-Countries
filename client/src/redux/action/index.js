@@ -8,6 +8,7 @@ import {
   GET_ALL_COUNTRIES_FILTER,
   ORDENAMIENTO_ALFABETICO,
   CHANGE_LOADING,
+  CHANGE_PAGE,
 } from "./types.js";
 
 export const getAllCountries = () => {
@@ -142,5 +143,22 @@ export const orderAlphabetic = (asc_des, column, countries) => {
   return {
     type: ORDENAMIENTO_ALFABETICO,
     payload: orderCountries,
+  };
+};
+export const changePage = (Page, adelante, atras) => {
+  return function (dispatch) {
+    if (Page === "adelante") {
+      dispatch({
+        type: CHANGE_PAGE,
+        payload: atras + 1,
+        payload2: adelante + 1,
+      });
+    } else {
+      dispatch({
+        type: CHANGE_PAGE,
+        payload: atras - 1,
+        payload2: adelante - 1,
+      });
+    }
   };
 };

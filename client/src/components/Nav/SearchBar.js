@@ -67,7 +67,6 @@ const SearchBar = ({
             value={Countrie}
             onChange={handleInputChange}
           />
-          {/* <input id="otro_item" type="submit" value="Buscar" /> */}
           <li>
             <h3>Activities</h3>
             <ul>
@@ -76,6 +75,7 @@ const SearchBar = ({
                   return (
                     <li
                       key={activity.id}
+                      id="puntero"
                       onClick={() => handleChange(activity.name)}
                     >
                       <h3>{activity.name}</h3>
@@ -92,6 +92,7 @@ const SearchBar = ({
                   return (
                     <li
                       key={elem.continents}
+                      id="puntero"
                       onClick={() => handleChangeContinent(elem.continents)}
                     >
                       <h3>{elem.continents}</h3>
@@ -102,7 +103,6 @@ const SearchBar = ({
           </li>
           <li>
             <h3>Ordenar</h3>
-
             <ul>
               <li>
                 <h3>Countries</h3>
@@ -116,17 +116,17 @@ const SearchBar = ({
                 </ul>
               </li>
               <li>
-                Population
+                <h3>Population</h3>
                 <ul>
                   <li
                     onClick={() => handleInputChangeOrder("population", true)}
                   >
-                    Ascendente
+                    <h3>Ascendente</h3>
                   </li>
                   <li
                     onClick={() => handleInputChangeOrder("population", false)}
                   >
-                    Descendente
+                    <h3>Descendente</h3>
                   </li>
                 </ul>
               </li>

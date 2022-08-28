@@ -48,6 +48,9 @@
   padding: 1px 1rem;
   background: #372b47;
 }
+.botones_row p{
+  color: #372b47;
+}
 .grupo_botones {
   display: flex;
   padding: 0px 0.5rem;

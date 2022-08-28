@@ -1,9 +1,17 @@
 import React from "react";
 import { connect, useDispatch } from "react-redux";
-import { getPages } from "../../redux/action/index";
+import { changePage, getPages } from "../../redux/action/index";
 import "./Nav.css";
 
-const Pie = ({ countries, lim_paginas, pagina }) => {
+const Pie = ({
+  countries,
+  lim_paginas,
+  pagina,
+  adelante,
+  atras,
+  getPages,
+  changePage,
+}) => {
   let paginas = 0;
 
   if (countries.length > lim_paginas) {
@@ -20,44 +28,82 @@ const Pie = ({ countries, lim_paginas, pagina }) => {
       paginas = parseInt(val[0], 10) + 2;
     }
   }
-  const dispatch = useDispatch();
   const array = [];
   for (let i = 1; i <= paginas; i++) {
     array.push(i);
   }
   const handleInputChange = (e) => {
     const { id } = e.target;
-    dispatch(getPages(id));
+    getPages(parseInt(id, 10));
+  };
+  const handleChangePage = (e) => {
+    const { id } = e.target;
+    if (id === "adelante") {
+      getPages(pagina + 1);
+    } else {
+      getPages(pagina - 1);
+    }
+    changePage(id, adelante, atras);
   };
   return (
     <nav className="navigation_container_pie">
       <div>
-        <div className="botones_row">
-          {countries.length > 0 ? (
-            array.map((num) => {
-              return (
-                <div className="divNum" key={num}>
-                  {pagina.toString() === num.toString() ? (
-                    <div className="grupo_botones_selecionado">
-                      <h3 id={num} onClick={handleInputChange}>
-                        {num}
-                      </h3>
-                    </div>
-                  ) : (
-                    <div className="grupo_botones">
-                      <a href="#">
-                        <h3 id={num} onClick={handleInputChange}>
-                          {num}
-                        </h3>
-                      </a>
-                    </div>
-                  )}
+        <div className="divNum">
+          <div className="botones_row">
+            {atras > 0 && (
+              <>
+                <div className="grupo_botones">
+                  <a href="#">
+                    <h3 id={"atras"} onClick={handleChangePage}>
+                      {"<"}
+                    </h3>
+                  </a>
                 </div>
-              );
-            })
-          ) : (
-            <span></span>
-          )}
+                <p>....</p>
+              </>
+            )}
+            {countries.length > 0 ? (
+              array.map((num) => {
+                return (
+                  <React.Fragment key={num}>
+                    {num <= adelante && num > atras && (
+                      <>
+                        {pagina.toString() === num.toString() ? (
+                          <div className="grupo_botones_selecionado">
+                            <h3 id={num} onClick={handleInputChange}>
+                              {num}
+                            </h3>
+                          </div>
+                        ) : (
+                          <div className="grupo_botones">
+                            <a href="#">
+                              <h3 id={num} onClick={handleInputChange}>
+                                {num}
+                              </h3>
+                            </a>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </React.Fragment>
+                );
+              })
+            ) : (
+              <span></span>
+            )}
+            {adelante < paginas && (
+              <>
+                <p>....</p>
+                <div className="grupo_botones">
+                  <a href="#">
+                    <h3 id={"adelante"} onClick={handleChangePage}>
+                      {">"}
+                    </h3>
+                  </a>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>
@@ -69,7 +115,15 @@ export const mapStateToProps = (state) => {
     countries: state.countries,
     pagina: state.pagina,
     lim_paginas: state.lim_paginas,
+    adelante: state.adelante,
+    atras: state.atras,
   };
 };
-
-export default connect(mapStateToProps, null)(Pie);
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    changePage: (Page, adelante, atras) =>
+      dispatch(changePage(Page, adelante, atras)),
+    getPages: (id) => dispatch(getPages(id)),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Pie);

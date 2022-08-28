@@ -8,6 +8,7 @@ import {
   CHANGE_LOADING,
   ORDENAMIENTO_ALFABETICO,
   GET_PAGES,
+  CHANGE_PAGE,
 } from "../action/types";
 
 const initialState = {
@@ -16,8 +17,10 @@ const initialState = {
   countriesTable: [],
   continents: [],
   activities: [],
-  pagina: 1,
   lim_paginas: 9,
+  pagina: 1,
+  atras: 0,
+  adelante: 5,
   isLoading: false,
 };
 
@@ -31,6 +34,8 @@ const rootReducer = (state = initialState, action) => {
         continents: action.payload[1],
         pagina: 1,
         isLoading: false,
+        atras: 0,
+        adelante: 5,
       };
     case GET_COUNTRIE:
       return {
@@ -74,6 +79,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         countries: action.payload,
+      };
+    case CHANGE_PAGE:
+      return {
+        ...state,
+        atras: action.payload,
+        adelante: action.payload2,
       };
     default:
       return {
