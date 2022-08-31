@@ -37,8 +37,8 @@ ol {
 #otro_item {
   /* text-decoration: none; */
   background-color: #fff;
-  padding: 10px 15px;
-  /* display: block; */
+  min-width: 50px;
+  height: 30px;
   align-content: center;
   right: 15px;
   float: left;
@@ -93,5 +93,8 @@ ol {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  #otro_item {
+    width: 80%;
   }
 }

@@ -21,7 +21,7 @@
     background-color: #201531;
     width: 94%;
     height: 380px;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 .card_div_centrado > h1{
@@ -58,15 +58,15 @@
     height: 30px;
     width: 80px;
     border-radius: 10px;
-    border: 1px solid #490c66;
+    border: 1px solid #363577;
     padding: 4px 8px;
-    background: #490c66;
+    background: #363577;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
   }
   .group_btn_delete > button:hover {
-    background: #7d1aaa;
+    background: #8280ff;
   }
   .div_table::-webkit-scrollbar{
     width: 7px

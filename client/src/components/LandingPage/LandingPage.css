@@ -155,7 +155,9 @@
 }
 .card_image img:hover{
   box-shadow: 0 0 10px #8354c9,
+  0 0 20px #8354c9,
   0 0 30px #8354c9,
+  0 0 40px #8354c9,
   0 0 50px #8354c9;
 }
 .divreflejo{

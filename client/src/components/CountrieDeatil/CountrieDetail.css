@@ -7,6 +7,8 @@
 }
 .divPadre {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
 }
 .divCard1 {
@@ -37,12 +39,16 @@
   background-color: #201531;
 }
 .divCard2 {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height: 400px;
+  flex-direction: column;
+  height: 500px;
   width: 48%;
 }
-.divCard2 > h1 {
+.divCard2 h1 {
   color: #8354c9;
+  margin-top: 0px;
 }
 .cards {
   display: flex;
@@ -70,7 +76,7 @@
   flex-direction: row;
   justify-content: center;
   width: 94%;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #201531;
   gap: 50px ;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -110,4 +116,16 @@
 .divCard2Scroll::-webkit-scrollbar-thumb{
   background: #9f67f3;
   border-radius: 5px;
+}
+
+@media screen and (max-width : 950px) {
+  .divPadre{
+    flex-direction: column;
+  }
+  .divCard1{
+    width: 94%;
+  }
+  .divCard2{
+    width: 94%;
+  }
 }

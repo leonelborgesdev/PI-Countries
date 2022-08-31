@@ -37,9 +37,9 @@
   margin-top: 50px;
   position: sticky;
 }
-.navigation_container > a {
+/* .navigation_container > a {
   background: #1F1D36;
-}
+} */
 .botones_row {
   display: flex;
   align-items: center;
@@ -53,48 +53,48 @@
 }
 .grupo_botones {
   display: flex;
-  padding: 0px 0.5rem;
+  /* padding: 0px 0.5rem; */
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   height: 35px;
-  width: 20px;
-  border: 1px black solid;
+  width: 35px;
+  border: 1px solid #201531 ;
   background: #201531;
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); */
 }
-.grupo_botones a h3 {
+.grupo_botones h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 35px;
-  width: 20px;
-  padding: 0px 0.2rem;
+  height: 100%;
+  width: 100%;
+  /* padding: 0px 0.2rem; */
 }
-.grupo_botones a {
+.grupo_botones h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 35px;
-  width: 20px;
+  height: 100%;
+  width: 100%;
   color: #8354c9;
-  text-decoration: none;
+  cursor: pointer;
 }
 .divNum{
   background: #372b47;
 }
-.grupo_botones a:hover {
+.grupo_botones h3:hover {
   display: flex;
-  padding: 0px 0.5rem;
   align-items: center;
   justify-content: center;
   background-color: #6b43a7;
   color: #201531;
   border-radius: 50%;
-  height: 35px;
-  width: 20px;
+  border: 1px solid #6b43a7 ;
+  height: 100%;
+  width: 100%;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
 }
 .grupo_botones_selecionado {
@@ -108,14 +108,12 @@
   width: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 1.5);
 }
-.grupo_botones_selecionado > a {
+.grupo_botones_selecionado > h3 {
   background-color: #6b43a7;
 }
 .card_imagePng {
   display: flex;
-  padding: 0px 0.7rem;
   align-items: center;
-  align-content: center;
   justify-content: center;
   background: #4a498f;
   margin-right: 10px;
@@ -125,14 +123,20 @@
 .card_imagePng:hover{
   box-shadow: 0 0 25px #8354c9;
 }
-.card_imagePng > a {
+.card_imagePng a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #4a498f;
   width: 100%;
+  height: 100%;
   border-radius: 15px;
+  margin: 5px;
 }
 .card_imagePng a img {
   background: #4a498f;
-  width: 100%;
+  width: 60px;
+  height: 50px;
   border-radius: 15px;
 }
 .card_imagePng a span {
@@ -146,12 +150,6 @@
 .grupo_botones_selecionado h3 {
   color: #1F1D36;
   padding: 0px 0.2rem;
-}
-.navigation_container a {
-  padding: 0px 0rem;
-  font-size: 1.112rem;
-  text-decoration: none;
-  color: whitesmoke;
 }
 
 .navigation_container a:hover {
@@ -170,8 +168,11 @@
     gap: 5px;
   }
 }
-@media screen and (max-width : 440px) {
+@media screen and (max-width : 450px) {
   .navigation_container{
-    height: 180px;
+    height: 192px;
+  }
+  .container_butons{
+    gap: 25px;
   }
 }

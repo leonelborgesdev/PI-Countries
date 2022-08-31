@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Nav from "../Nav/Nav";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getCountrie } from "../../redux/action/index";
 import loading_search from "../../assets/loading_search.gif";
 import "./CountrieDetail.css";

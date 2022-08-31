@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import { changePage, getPages } from "../../redux/action/index";
 import "./Nav.css";
 
@@ -53,11 +53,9 @@ const Pie = ({
             {atras > 0 && (
               <>
                 <div className="grupo_botones">
-                  <a href="#">
-                    <h3 id={"atras"} onClick={handleChangePage}>
-                      {"<"}
-                    </h3>
-                  </a>
+                  <h3 id={"atras"} onClick={handleChangePage}>
+                    {"<"}
+                  </h3>
                 </div>
                 <p>....</p>
               </>
@@ -76,11 +74,9 @@ const Pie = ({
                           </div>
                         ) : (
                           <div className="grupo_botones">
-                            <a href="#">
-                              <h3 id={num} onClick={handleInputChange}>
-                                {num}
-                              </h3>
-                            </a>
+                            <h3 id={num} onClick={handleInputChange}>
+                              {num}
+                            </h3>
                           </div>
                         )}
                       </>
@@ -95,11 +91,9 @@ const Pie = ({
               <>
                 <p>....</p>
                 <div className="grupo_botones">
-                  <a href="#">
-                    <h3 id={"adelante"} onClick={handleChangePage}>
-                      {">"}
-                    </h3>
-                  </a>
+                  <h3 id={"adelante"} onClick={handleChangePage}>
+                    {">"}
+                  </h3>
                 </div>
               </>
             )}
