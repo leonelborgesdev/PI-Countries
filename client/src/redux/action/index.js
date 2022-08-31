@@ -10,10 +10,10 @@ import {
   CHANGE_LOADING,
   CHANGE_PAGE,
 } from "./types.js";
-
+const api = "http://localhost:3001/";
 export const getAllCountries = () => {
   return async function (dispatch) {
-    const response = await fetch("http://localhost:3001/countries/");
+    const response = await fetch(`${api}countries/`);
     if (response) {
       const date = await response.json();
       dispatch({
@@ -26,7 +26,7 @@ export const getAllCountries = () => {
 
 export const getCountrie = (idPais) => {
   return async function (dispatch) {
-    const response = await fetch("http://localhost:3001/countries/" + idPais);
+    const response = await fetch(`${api}countries/${idPais}`);
     if (response) {
       const date = await response.json();
       dispatch({
@@ -38,9 +38,7 @@ export const getCountrie = (idPais) => {
 };
 export const getCountrieByName = (name) => {
   return async function (dispatch) {
-    const response = await fetch(
-      "http://localhost:3001/countries?name=" + name
-    );
+    const response = await fetch(`${api}countries?name=${name}`);
     if (response) {
       const date = await response.json();
       dispatch({
@@ -63,7 +61,7 @@ export const getAllCountriesByContinent = (Continent, Countries) => {
 //----------------------------Activities----------------------------------
 export const addActivitis = (activity) => {
   return async function () {
-    const response = await fetch("http://localhost:3001/activity/", {
+    const response = await fetch(`${api}activity/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +74,7 @@ export const addActivitis = (activity) => {
 
 export const deleteActivity = (id) => {
   return async function () {
-    const response = await fetch("http://localhost:3001/activity/" + id, {
+    const response = await fetch(`${api}activity/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +97,7 @@ export const getPages = (page, lim_paginas) => {
 };
 export const getAllActivities = () => {
   return async function (dispatch) {
-    const response = await fetch("http://localhost:3001/activity/");
+    const response = await fetch(`${api}activity/`);
     if (response) {
       const date = await response.json();
       dispatch({

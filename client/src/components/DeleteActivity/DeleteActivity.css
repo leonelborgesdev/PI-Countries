@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: white;
+    background-color: #fff;
     gap: 1rem;
   }
 .card_div_centrado {
@@ -58,14 +58,15 @@
     height: 30px;
     width: 80px;
     border-radius: 10px;
-    border: 1px solid #7d1aaa;
+    border: 1px solid #490c66;
     padding: 4px 8px;
-    background: #7d1aaa;
+    background: #490c66;
     font-size: 18px;
-    color: whitesmoke;
+    color: #fff;
+    cursor: pointer;
   }
   .group_btn_delete > button:hover {
-    background: #551374;
+    background: #7d1aaa;
   }
   .div_table::-webkit-scrollbar{
     width: 7px

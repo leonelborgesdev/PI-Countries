@@ -63,9 +63,11 @@ const Country = ({
                           <div className="card_img">
                             <img src={countrie.flags} alt="" />
                           </div>
-                          <h3>{countrie.name}</h3>
-                          <h3>{countrie.continents}</h3>
-                          <h3>
+                          <h3 className="h3_countries">{countrie.name}</h3>
+                          <h3 className="h3_countries">
+                            {countrie.continents}
+                          </h3>
+                          <h3 className="h3_countries">
                             Population:{" "}
                             {countrie.population.toLocaleString("es-BO")}
                           </h3>
