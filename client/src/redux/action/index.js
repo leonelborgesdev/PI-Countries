@@ -9,6 +9,7 @@ import {
   ORDENAMIENTO_ALFABETICO,
   CHANGE_LOADING,
   CHANGE_PAGE,
+  CREATE_ACTIVITY,
 } from "./types.js";
 const api = "http://localhost:3001/";
 export const getAllCountries = () => {
@@ -60,7 +61,8 @@ export const getAllCountriesByContinent = (Continent, Countries) => {
 };
 //----------------------------Activities----------------------------------
 export const addActivitis = (activity) => {
-  return async function () {
+  console.log(activity);
+  return async function (dispatch) {
     const response = await fetch(`${api}activity/`, {
       method: "POST",
       headers: {
@@ -68,7 +70,14 @@ export const addActivitis = (activity) => {
       },
       body: JSON.stringify(activity),
     });
-    return response.json();
+    if (response) {
+      const date = await response.json();
+      console.log(date);
+      dispatch({
+        type: CREATE_ACTIVITY,
+        payload: date,
+      });
+    }
   };
 };
 

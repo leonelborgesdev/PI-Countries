@@ -1,15 +1,19 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 import Nav from "../Nav/Nav";
 import { getAllActivities, getAllCountries } from "../../redux/action/index";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addActivitis } from "../../redux/action/index";
 import "./CreateActivity.css";
 const { v4 } = require("uuid");
 
-const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
+const CreateActivity = ({
+  countries,
+  getAllCountries,
+  getAllActivities,
+  addActivitis,
+}) => {
   useEffect(() => {
     if (countries.length < 250) {
       getAllCountries();
@@ -18,7 +22,6 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
   }, []);
   const navigate = useNavigate();
   const id = v4();
-  const dispatch = useDispatch();
   const InitialState = {
     id: id,
     name: "",
@@ -44,7 +47,7 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
   };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    let expr = /^[A-Za-z0-9 ]{2,12}$/i;
+    // let expr = /^[A-Za-z0-9 ]{2,12}$/i;
     setActivity({
       ...activity,
       [name]: value,
@@ -70,9 +73,8 @@ const CreateActivity = ({ countries, getAllCountries, getAllActivities }) => {
         activity.duration =
           durationValue.durationInt + " " + durationValue.durationSelect;
         if (activity.ch_activity.length > 0) {
-          console.log(activity.ch_activity);
-          // await dispatch(addActivitis(activity));
-          // navigate("/countries");
+          await addActivitis(activity);
+          navigate("/countries");
         } else {
           setlabelError(
             "Seleccione Los Paises a los que se asignara esta actividad"
@@ -257,6 +259,7 @@ export const mapDispatchToProps = (dispatch) => {
   return {
     getAllCountries: () => dispatch(getAllCountries()),
     getAllActivities: () => dispatch(getAllActivities()),
+    addActivitis: (activity) => dispatch(addActivitis(activity)),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(CreateActivity);

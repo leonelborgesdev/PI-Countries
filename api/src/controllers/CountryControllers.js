@@ -68,12 +68,28 @@ async function addActivitis(req, res) {
   const { id, name, dificult, duration, season, ch_activity } = req.body;
 
   let activity = createActivity(id, name, dificult, duration, season); //capturando actividad
-  if (activity.name) {
-    const actividad1 = await Activity.create(activity); //creando actividad
-    await actividad1.setCountries(ch_activity); //insertando activitis_countries
-    return res.status(200).json(activity);
-  } else {
-    return res.status(404).json(activity);
+  let coincidencias = await Activity.findAll({
+    where: { name: `${activity.name}` },
+  });
+  console.log(activity.name, coincidencias.length);
+  try {
+    if (coincidencias.length > 0) {
+      return res.status(404).json({
+        ok: false,
+        msg: `Ya existe una Actividad con el mismo nombre${name}`,
+      });
+    }
+    if (activity.name) {
+      const actividad1 = await Activity.create(activity); //creando actividad
+      await actividad1.setCountries(ch_activity); //insertando activitis_countries
+      return res.status(200).json({ ok: true, activity });
+    } else {
+      return res
+        .status(404)
+        .json({ ok: false, msg: "No se introdujo el nombre de la actividad" });
+    }
+  } catch (error) {
+    return res.status(404).json({ ok: false, msg: error });
   }
 }
 async function deleteActivity(req, res) {
@@ -82,7 +98,10 @@ async function deleteActivity(req, res) {
     const cont = await Activity.destroy({ where: { id: `${id}` } });
     return res.status(200).json(cont);
   } else {
-    return res.status(404);
+    return res.status(404).json({
+      ok: false,
+      msg: "Se produjo un error al intentar eliminar la actividad",
+    });
   }
 }
 async function getActivities(req, res) {

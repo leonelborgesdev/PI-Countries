@@ -9,6 +9,7 @@ import {
   ORDENAMIENTO_ALFABETICO,
   GET_PAGES,
   CHANGE_PAGE,
+  CREATE_ACTIVITY,
 } from "../action/types";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   countriesTable: [],
   continents: [],
   activities: [],
+  activities_confirm: { ok: true, msg: "ok" },
   lim_paginas: 9,
   pagina: 1,
   atras: 0,
@@ -69,6 +71,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         activities: action.payload,
+      };
+    case CREATE_ACTIVITY:
+      return {
+        ...state,
+        activities_confirm: action.payload,
       };
     case CHANGE_LOADING:
       return {
