@@ -18,12 +18,12 @@ const Nav = ({ getAllCountries }) => {
       <div className="container_butons">
         <div className="card_imagePng">
           <Link to="/">
-            <img src={home} alt="image" />
+            <img src={home} alt={`image`} />
           </Link>
         </div>
         <div className="card_imagePng" onClick={handleOnclick}>
           <Link to="/countries">
-            <img src={banderas_icono} alt="image" />
+            <img src={banderas_icono} alt={`image`} />
           </Link>
         </div>
       </div>
@@ -31,12 +31,12 @@ const Nav = ({ getAllCountries }) => {
       <div className="container_butons">
         <div className="card_imagePng">
           <Link to="/activityDelete">
-            <img src={activity_delete} alt="image.png" />
+            <img src={activity_delete} alt={`image`} />
           </Link>
         </div>
         <div className="card_imagePng">
           <Link to="/activity">
-            <img src={activity_add} alt="image.png" />
+            <img src={activity_add} alt={`image`} />
           </Link>
         </div>
       </div>

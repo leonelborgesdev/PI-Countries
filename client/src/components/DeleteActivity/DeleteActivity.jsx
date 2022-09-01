@@ -1,19 +1,18 @@
 import React from "react";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { deleteActivity, getAllActivities } from "../../redux/action";
 import Nav from "../Nav/Nav";
 import "./DeleteActivity.css";
 
-const DeleteActivity = () => {
-  const { activities } = useSelector((state) => state);
+const DeleteActivity = ({ activities, getAllActivities, deleteActivity }) => {
   useEffect(() => {
-    dispatch(getAllActivities());
+    getAllActivities();
   }, []);
-  const dispatch = useDispatch();
-  const handleDelete = async (id) => {
-    await dispatch(deleteActivity(id));
-    await dispatch(getAllActivities());
+  const handleDelete = (id) => {
+    // alert(id);
+    deleteActivity(id);
+    window.location.reload();
   };
   return (
     <div>
@@ -70,5 +69,16 @@ const DeleteActivity = () => {
     </div>
   );
 };
+export const mapStateToProps = (state) => {
+  return {
+    activities: state.activities,
+  };
+};
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    getAllActivities: () => dispatch(getAllActivities()),
+    deleteActivity: (id) => dispatch(deleteActivity(id)),
+  };
+};
 
-export default DeleteActivity;
+export default connect(mapStateToProps, mapDispatchToProps)(DeleteActivity);
