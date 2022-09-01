@@ -18,12 +18,12 @@ const Nav = ({ getAllCountries }) => {
       <div className="container_butons">
         <div className="card_imagePng">
           <Link to="/">
-            <img src={home} alt="image.png" />
+            <img src={home} alt="image" />
           </Link>
         </div>
         <div className="card_imagePng" onClick={handleOnclick}>
           <Link to="/countries">
-            <img src={banderas_icono} alt="image.png" />
+            <img src={banderas_icono} alt="image" />
           </Link>
         </div>
       </div>
